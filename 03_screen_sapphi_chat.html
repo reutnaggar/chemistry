@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chemistry — מסך פתיחה של סאפי</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500&family=Frank+Ruhl+Libre:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Assistant', sans-serif;
+      background: #f0ebe5;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    .phone {
+      width: 340px;
+      height: 680px;
+      background: #1a1617;
+      border-radius: 32px;
+      overflow: hidden;
+      position: relative;
+      color: #f5ebe4;
+      box-shadow: 0 0 0 8px #0f0d0e, 0 30px 60px rgba(0,0,0,0.3);
+    }
+    .status-bar {
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .battery {
+      width: 16px;
+      height: 10px;
+      border: 1px solid #f5ebe4;
+      border-radius: 2px;
+      display: inline-block;
+      position: relative;
+    }
+    .battery::before {
+      content: '';
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      width: 11px;
+      height: 6px;
+      background: #f5ebe4;
+      border-radius: 1px;
+    }
+    .header {
+      padding: 12px 20px 16px;
+      border-bottom: 0.5px solid rgba(245, 235, 228, 0.08);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #d85a30 0%, #993c1d 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+      font-size: 18px;
+      color: #faece7;
+    }
+    .name-area { flex: 1; }
+    .name { font-size: 16px; font-weight: 500; margin: 0; }
+    .status {
+      font-size: 12px;
+      color: rgba(245, 235, 228, 0.5);
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #5dcaa5;
+      display: inline-block;
+    }
+    .atom {
+      font-size: 22px;
+      background: linear-gradient(135deg, #e8c56b 0%, #a87b22 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .messages {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      height: calc(100% - 44px - 72px - 76px);
+      overflow: hidden;
+    }
+    .date-divider {
+      text-align: center;
+      font-size: 11px;
+      color: rgba(245, 235, 228, 0.35);
+      margin-bottom: 4px;
+    }
+    .bubble {
+      align-self: flex-end;
+      max-width: 85%;
+      background: #2a2324;
+      border: 0.5px solid rgba(212, 168, 74, 0.18);
+      border-radius: 18px 18px 4px 18px;
+      padding: 12px 16px;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    .input-area {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 12px 16px 24px;
+      background: #1a1617;
+      border-top: 0.5px solid rgba(245, 235, 228, 0.08);
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .input-field {
+      flex: 1;
+      background: #2a2324;
+      border-radius: 22px;
+      padding: 11px 18px;
+      font-size: 14px;
+      color: rgba(245, 235, 228, 0.4);
+      border: 0.5px solid rgba(245, 235, 228, 0.05);
+    }
+    .send-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #d85a30;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="phone">
+    <div class="status-bar">
+      <span>9:41</span>
+      <span class="battery"></span>
+    </div>
+
+    <div class="header">
+      <div class="avatar">ס</div>
+      <div class="name-area">
+        <p class="name">סאפי</p>
+        <p class="status"><span class="status-dot"></span>זמינה עכשיו</p>
+      </div>
+      <div class="atom">⚛</div>
+    </div>
+
+    <div class="messages">
+      <div class="date-divider">היום · 21:47</div>
+      <div class="bubble">דנה, היי.</div>
+      <div class="bubble">אני סאפי, השדכנית שלך פה.</div>
+      <div class="bubble">אני עובדת אחרת מאיך שהתרגלת. אין פה גריד של פרופילים, ואין אלגוריתם שזורק אותך לים. יש פה רק אותנו שתינו, ולי יש זמן.</div>
+      <div class="bubble">אנחנו נדבר. אני אכיר אותך לאט. ורק אחרי שאני באמת אבין מה את מחפשת — אני אציע לך מישהי.</div>
+      <div class="bubble">מתאים לך?</div>
+    </div>
+
+    <div class="input-area">
+      <div class="input-field">כתבי לסאפי...</div>
+      <button class="send-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#faece7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
+    </div>
+  </div>
+</body>
+</html>
