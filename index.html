@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chemistry ⚛ — Design Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Assistant', sans-serif;
+      background: #f5efe8;
+      color: #1a1617;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 24px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .atom-hero {
+      font-size: 72px;
+      background: linear-gradient(135deg, #d4a84a 0%, #8a6218 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+      line-height: 1;
+      filter: drop-shadow(0 4px 20px rgba(212, 168, 74, 0.15));
+    }
+
+    h1 {
+      font-family: 'Frank Ruhl Libre', serif;
+      font-size: 56px;
+      font-weight: 500;
+      color: #1a1617;
+      margin-bottom: 14px;
+      letter-spacing: 0.5px;
+    }
+
+    .slogan {
+      font-family: 'Frank Ruhl Libre', serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: #5c4f46;
+      margin-bottom: 8px;
+    }
+
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(168, 123, 34, 0.5), transparent);
+      margin: 24px auto;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: #6b5d52;
+      max-width: 540px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .screens-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      max-width: 1200px;
+      margin: 40px auto 60px;
+      padding: 0 24px;
+    }
+
+    .screen-card {
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: transform 0.2s ease;
+    }
+
+    .screen-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .screen-frame {
+      width: 280px;
+      height: 560px;
+      margin: 0 auto 20px;
+      border-radius: 28px;
+      overflow: hidden;
+      background: #1a1617;
+      box-shadow: 0 0 0 6px #0f0d0e, 0 20px 50px rgba(0, 0, 0, 0.18);
+      position: relative;
+    }
+
+    .screen-frame iframe {
+      width: 340px;
+      height: 680px;
+      border: none;
+      transform: scale(0.824);
+      transform-origin: top right;
+      pointer-events: none;
+    }
+
+    .screen-number {
+      font-family: 'Frank Ruhl Libre', serif;
+      font-size: 14px;
+      color: #a87b22;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .screen-title {
+      font-family: 'Frank Ruhl Libre', serif;
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: #1a1617;
+    }
+
+    .screen-desc {
+      font-size: 14px;
+      color: #6b5d52;
+      max-width: 240px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    .screen-link {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 13px;
+      color: #a87b22;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 40px 24px 60px;
+      border-top: 1px solid rgba(168, 123, 34, 0.15);
+      max-width: 700px;
+      margin: 40px auto 0;
+    }
+
+    .footer p {
+      font-size: 14px;
+      color: #6b5d52;
+      margin-bottom: 6px;
+    }
+
+    .footer a {
+      color: #a87b22;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      h1 { font-size: 42px; }
+      .atom-hero { font-size: 60px; }
+      .slogan { font-size: 18px; }
+      .hero { padding: 50px 20px 30px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="atom-hero">⚛</div>
+    <h1>Chemistry</h1>
+    <p class="slogan">אהבה אינה אלגוריתם</p>
+    <div class="divider"></div>
+    <p class="subtitle">אפליקציית היכרויות לקהילה הגאה<br>עם שדכנית-AI מקצועית שמכירה אותך לעומק</p>
+  </div>
+
+  <div class="screens-grid">
+
+    <a href="01_screen_splash.html" class="screen-card" target="_blank">
+      <div class="screen-frame">
+        <iframe src="01_screen_splash.html" scrolling="no"></iframe>
+      </div>
+      <div class="screen-number">מסך 01</div>
+      <h3 class="screen-title">Splash</h3>
+      <p class="screen-desc">רגע הפתיחה של האפליקציה — השאלה, קו זהב, והתשובה</p>
+      <span class="screen-link">פתיחה במסך מלא ←</span>
+    </a>
+
+    <a href="02_screen_signup.html" class="screen-card" target="_blank">
+      <div class="screen-frame">
+        <iframe src="02_screen_signup.html" scrolling="no"></iframe>
+      </div>
+      <div class="screen-number">מסך 02</div>
+      <h3 class="screen-title">הרשמה</h3>
+      <p class="screen-desc">קבלת פנים חמה, מינימום שדות, כפתור למעבר לסאפי</p>
+      <span class="screen-link">פתיחה במסך מלא ←</span>
+    </a>
+
+    <a href="03_screen_sapphi_chat.html" class="screen-card" target="_blank">
+      <div class="screen-frame">
+        <iframe src="03_screen_sapphi_chat.html" scrolling="no"></iframe>
+      </div>
+      <div class="screen-number">מסך 03</div>
+      <h3 class="screen-title">צ'אט עם סאפי</h3>
+      <p class="screen-desc">המפגש הראשון עם השדכנית. לא פרופילים, רק שיחה</p>
+      <span class="screen-link">פתיחה במסך מלא ←</span>
+    </a>
+
+  </div>
+
+  <div class="footer">
+    <p>עבודה בתהליך — מוקאפ ראשוני, לא אפליקציה עובדת</p>
+    <p>עוצב על ידי רעות נגר · Chemistry ⚛</p>
+  </div>
+
+</body>
+</html>
