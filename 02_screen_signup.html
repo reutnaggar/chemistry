@@ -61,15 +61,11 @@
       flex-direction: column;
       padding: 28px 28px 36px;
     }
-    .atom-small {
-      text-align: center;
-      font-size: 36px;
-      background: linear-gradient(135deg, #e8c56b 0%, #a87b22 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 20px;
-      margin-top: 12px;
+    .logo-small {
+      width: 56px;
+      height: 56px;
+      margin: 12px auto 18px;
+      display: block;
     }
     .title {
       font-family: 'Frank Ruhl Libre', serif;
@@ -173,7 +169,24 @@
       <span class="battery"></span>
     </div>
     <div class="content">
-      <div class="atom-small">⚛</div>
+      <svg class="logo-small" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="55" cy="100" rx="28" ry="24" fill="none" stroke="url(#signup-gold)" stroke-width="3.5" transform="rotate(12 55 100)"/>
+        <path d="M 82 86 Q 84 82, 88 84 L 118 116 Q 120 119, 116 118 Z" fill="url(#signup-coral)"/>
+        <path d="M 118 86 Q 116 82, 112 84 L 82 116 Q 80 119, 84 118 Z" fill="url(#signup-coral)"/>
+        <line x1="86" y1="86" x2="114" y2="114" stroke="url(#signup-coral)" stroke-width="3.5" stroke-linecap="round"/>
+        <line x1="114" y1="86" x2="86" y2="114" stroke="url(#signup-coral)" stroke-width="3.5" stroke-linecap="round"/>
+        <ellipse cx="145" cy="100" rx="28" ry="24" fill="none" stroke="url(#signup-gold)" stroke-width="3.5" transform="rotate(-12 145 100)"/>
+        <defs>
+          <linearGradient id="signup-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#e8c56b"/>
+            <stop offset="100%" stop-color="#a87b22"/>
+          </linearGradient>
+          <linearGradient id="signup-coral" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#e88a5f"/>
+            <stop offset="100%" stop-color="#993c1d"/>
+          </linearGradient>
+        </defs>
+      </svg>
       <h2 class="title">ברוכה הבאה :) כיף שבאת</h2>
 
       <label class="field-label" for="name">שם מלא</label>

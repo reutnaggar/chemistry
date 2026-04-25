@@ -91,12 +91,9 @@
       background: #5dcaa5;
       display: inline-block;
     }
-    .atom {
-      font-size: 22px;
-      background: linear-gradient(135deg, #e8c56b 0%, #a87b22 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+    .logo-tiny {
+      width: 32px;
+      height: 32px;
     }
     .messages {
       padding: 20px;
@@ -170,7 +167,24 @@
         <p class="name">סאפי</p>
         <p class="status"><span class="status-dot"></span>זמינה עכשיו</p>
       </div>
-      <div class="atom">⚛</div>
+      <svg class="logo-tiny" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="55" cy="100" rx="28" ry="24" fill="none" stroke="url(#chat-gold)" stroke-width="6" transform="rotate(12 55 100)"/>
+        <path d="M 82 86 Q 84 82, 88 84 L 118 116 Q 120 119, 116 118 Z" fill="url(#chat-coral)"/>
+        <path d="M 118 86 Q 116 82, 112 84 L 82 116 Q 80 119, 84 118 Z" fill="url(#chat-coral)"/>
+        <line x1="86" y1="86" x2="114" y2="114" stroke="url(#chat-coral)" stroke-width="6" stroke-linecap="round"/>
+        <line x1="114" y1="86" x2="86" y2="114" stroke="url(#chat-coral)" stroke-width="6" stroke-linecap="round"/>
+        <ellipse cx="145" cy="100" rx="28" ry="24" fill="none" stroke="url(#chat-gold)" stroke-width="6" transform="rotate(-12 145 100)"/>
+        <defs>
+          <linearGradient id="chat-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#e8c56b"/>
+            <stop offset="100%" stop-color="#a87b22"/>
+          </linearGradient>
+          <linearGradient id="chat-coral" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#e88a5f"/>
+            <stop offset="100%" stop-color="#993c1d"/>
+          </linearGradient>
+        </defs>
+      </svg>
     </div>
 
     <div class="messages">
