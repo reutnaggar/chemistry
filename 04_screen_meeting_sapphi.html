@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chemistry — פוגשים את סאפי</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500&family=Frank+Ruhl+Libre:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Assistant', sans-serif;
+      background: #f0ebe5;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    .phone {
+      width: 340px;
+      height: 680px;
+      background: #1a1617;
+      border-radius: 32px;
+      overflow: hidden;
+      position: relative;
+      color: #f5ebe4;
+      box-shadow: 0 0 0 8px #0f0d0e, 0 30px 60px rgba(0,0,0,0.3);
+    }
+    .status-bar {
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .battery {
+      width: 16px;
+      height: 10px;
+      border: 1px solid #f5ebe4;
+      border-radius: 2px;
+      display: inline-block;
+      position: relative;
+    }
+    .battery::before {
+      content: '';
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      width: 11px;
+      height: 6px;
+      background: #f5ebe4;
+      border-radius: 1px;
+    }
+    .content {
+      height: calc(100% - 44px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 32px;
+    }
+
+    /* Animations */
+    @keyframes appearO1 {
+      0% { opacity: 0; transform: scale(0.7) rotate(12deg); }
+      20%, 100% { opacity: 1; transform: scale(1) rotate(12deg); }
+    }
+    @keyframes appearX {
+      0%, 25% { opacity: 0; transform: scale(0.4); }
+      45%, 100% { opacity: 1; transform: scale(1); }
+    }
+    @keyframes appearO2 {
+      0%, 50% { opacity: 0; transform: scale(0.7) rotate(-12deg); }
+      70%, 100% { opacity: 1; transform: scale(1) rotate(-12deg); }
+    }
+    @keyframes textHide {
+      0%, 70% { opacity: 1; }
+      80%, 100% { opacity: 0; }
+    }
+    @keyframes ctaShow {
+      0%, 80% { opacity: 0; transform: translateY(8px); }
+      95%, 100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .anim-o1 {
+      animation: appearO1 4s ease-out forwards;
+      transform-origin: center;
+      transform-box: fill-box;
+    }
+    .anim-x {
+      animation: appearX 4s ease-out forwards;
+      transform-origin: center;
+      transform-box: fill-box;
+    }
+    .anim-o2 {
+      animation: appearO2 4s ease-out forwards;
+      transform-origin: center;
+      transform-box: fill-box;
+    }
+
+    .loading-text {
+      font-family: 'Frank Ruhl Libre', serif;
+      font-size: 20px;
+      font-weight: 400;
+      margin: 0 0 -8px;
+      text-align: center;
+      letter-spacing: 0.3px;
+      background: linear-gradient(135deg, #e8c56b 0%, #a87b22 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: textHide 4s ease-out forwards;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      filter: drop-shadow(0 4px 24px rgba(232, 197, 107, 0.15));
+    }
+
+    .cta-area {
+      margin-top: 40px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+    }
+
+    .cta {
+      background: #d85a30;
+      border: none;
+      border-radius: 16px;
+      padding: 14px 36px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #faece7;
+      font-family: 'Assistant', sans-serif;
+      cursor: pointer;
+      animation: ctaShow 4s ease-out forwards;
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="phone">
+    <div class="status-bar">
+      <span>9:41</span>
+      <span class="battery"></span>
+    </div>
+
+    <div class="content">
+      <p class="loading-text">סאפי מתחברת</p>
+
+      <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <ellipse class="anim-o1" cx="55" cy="100" rx="28" ry="24" fill="none" stroke="url(#trans-gold)" stroke-width="3.5"/>
+        <g class="anim-x">
+          <path d="M 82 86 Q 84 82, 88 84 L 118 116 Q 120 119, 116 118 Z" fill="url(#trans-coral)"/>
+          <path d="M 118 86 Q 116 82, 112 84 L 82 116 Q 80 119, 84 118 Z" fill="url(#trans-coral)"/>
+          <line x1="86" y1="86" x2="114" y2="114" stroke="url(#trans-coral)" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="114" y1="86" x2="86" y2="114" stroke="url(#trans-coral)" stroke-width="3.5" stroke-linecap="round"/>
+        </g>
+        <ellipse class="anim-o2" cx="145" cy="100" rx="28" ry="24" fill="none" stroke="url(#trans-gold)" stroke-width="3.5"/>
+        <defs>
+          <linearGradient id="trans-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#e8c56b"/>
+            <stop offset="100%" stop-color="#a87b22"/>
+          </linearGradient>
+          <linearGradient id="trans-coral" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#e88a5f"/>
+            <stop offset="100%" stop-color="#993c1d"/>
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <div class="cta-area">
+        <button class="cta">מוזמנת להיכנס</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
